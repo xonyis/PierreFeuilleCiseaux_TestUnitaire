@@ -1,4 +1,3 @@
-// game.js
 
 function playGame(userChoice) {
     const choices = ["rock", "paper", "scissors"];

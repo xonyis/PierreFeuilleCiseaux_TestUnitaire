@@ -2,22 +2,22 @@
 
 const { playGame } = require('./main.js');
 
-test('Should declare a tie', () => {
+test('Egalité', () => {
     // Arrange
     const userChoice = 'rock';
-    jest.spyOn(Math, 'random').mockReturnValue(0); // Force computer choice to be 'rock'
+    jest.spyOn(Math, 'random').mockReturnValue(0); 
 
     // Act
     const result = playGame(userChoice);
 
     // Assert
-    expect(result).toContain("It's a tie");
+    expect(result).toContain("Egalité");
 });
 
-test('Should declare user as the winner', () => {
+test('User Gagne', () => {
     // Arrange
     const userChoice = 'paper';
-    jest.spyOn(Math, 'random').mockReturnValue(0.1); // Force computer choice to be 'rock'
+    jest.spyOn(Math, 'random').mockReturnValue(0.1); 
 
     // Act
     const result = playGame(userChoice);
@@ -26,19 +26,19 @@ test('Should declare user as the winner', () => {
     expect(result).toContain('You win');
 });
 
-test('Should declare computer as the winner', () => {
+test('Computer Gagne', () => {
     // Arrange
     const userChoice = 'scissors';
-    jest.spyOn(Math, 'random').mockReturnValue(0.8); // Force computer choice to be 'rock'
+    jest.spyOn(Math, 'random').mockReturnValue(0.8); 
 
     // Act
     const result = playGame(userChoice);
 
     // Assert
-    expect(result).toContain('Computer wins');
+    expect(result).toContain('Computer win');
 });
 
-test('Should handle invalid user choice', () => {
+test('choix invalide', () => {
     // Arrange
     const userChoice = 'invalid_choice';
 
